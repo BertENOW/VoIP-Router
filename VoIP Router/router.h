@@ -18,9 +18,6 @@ private:
 		return nextChannelID;
 	};
 
-	//Each router channel can create packets for testing purposes
-	MetaData CreatePacket(int sourceID, int packetNo);
-
 	std::string GetPriority(PacketPriority p);
 
 public:

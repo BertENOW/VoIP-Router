@@ -58,16 +58,6 @@ std::string RouterChannel::GetPriority(PacketPriority p) {
 	}
 }
 
-MetaData RouterChannel::CreatePacket(int sourceID, int packetNo) {
-	MetaData packet;
-	std::string message = "Message data " + std::to_string(packetNo);
-	packet.messageData = message;
-	packet.sourceID = sourceID;
-	packet.priority = Negative;
-	packet.packetNumber = packetNo;
-	return packet;
-}
-
 void RouterChannel::SetPriority(int sourceID, PacketPriority p) {
 	int packetSize = PacketQueue.size();
 	for (int i = 0; i < packetSize; i++) {
