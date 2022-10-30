@@ -5,6 +5,11 @@ Source::Source() {
 	sourcePriority = Normal;
 }
 
+Source::Source(PacketPriority p) {
+	sourceID = NextID();
+	sourcePriority = p;
+}
+
 Source::~Source() {
 	std::cout << "\nSource is been destroyeed" ;
 }

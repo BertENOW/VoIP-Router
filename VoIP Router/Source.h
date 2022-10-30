@@ -26,7 +26,9 @@ private:
 
 
 public:
+	//Two constructors allow and one destructor. Constructor 1 has a set priority of Normal while two the priority can be set 
 	Source();
+	Source(PacketPriority p);
 	~Source();
 	
 	//Returns priority of a source to be used by the router function to display the priority

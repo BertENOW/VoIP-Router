@@ -141,12 +141,14 @@
   <ItemGroup>
     <ClInclude Include="metadata.h" />
     <ClInclude Include="router.h" />
+    <ClInclude Include="RouterChannel.h" />
     <ClInclude Include="Source.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="metadata.cpp" />
     <ClCompile Include="router.cpp" />
+    <ClCompile Include="RouterChannel.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
