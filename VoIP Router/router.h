@@ -36,4 +36,7 @@ public:
 
 	//Navigate through packet queue to set new priority
 	void SetPriority(int sourceID, PacketPriority p);
+
+	//Display priority of a scecific source. 
+	void DisplayPriority(PacketPriority p);
 };

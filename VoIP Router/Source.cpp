@@ -2,6 +2,7 @@
 
 Source::Source() {
 	sourceID = NextID();
+	sourcePriority = Normal;
 }
 
 Source::~Source() {
@@ -13,7 +14,8 @@ MetaData Source::CreatePacket(int packetNo) {
 	std::string message = "Message data " + std::to_string(packetNo);
 	packet.messageData = message;
 	packet.sourceID = sourceID;
-	packet.priority = Negative;
-	packet.packetNumber = packetNo;
+	packet.priority = sourcePriority;
+	packet.packetNumber = NextPacketNum();
+	packetCount = packet.packetNumber;
 	return packet;
 }

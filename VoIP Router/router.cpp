@@ -5,10 +5,6 @@ RouterChannel::RouterChannel() {
 	//assign unique channel ID for each channel
 	ChannelID = NextID();
 	
-	//create 10 packets for testing
-	for (int i = 0; i < 10; i++) {
-		SetPacket(CreatePacket(1, i + 1));
-	}
 }
 
 RouterChannel::~RouterChannel() {
@@ -68,3 +64,6 @@ void RouterChannel::SetPriority(int sourceID, PacketPriority p) {
 	}
 }
 
+void RouterChannel::DisplayPriority(PacketPriority p) {
+	std::cout << "Source Priority is: " << GetPriority(p);
+}
